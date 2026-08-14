@@ -34,14 +34,14 @@ export default function Differentiation() {
             </div>
           </div>
           <div className="compare-col win">
-            <h4>Anora</h4>
+            <h4>Arlong</h4>
             <div className="compare-step">
               <span className="mark">01</span>
               <span>Guest calls during service</span>
             </div>
             <div className="compare-step strong">
               <span className="mark">02</span>
-              <span>Anora Voice always answers</span>
+              <span>Arlong Voice always answers</span>
             </div>
             <div className="compare-step strong">
               <span className="mark">03</span>

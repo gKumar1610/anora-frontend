@@ -15,16 +15,16 @@ export default function Footer() {
             <div className="eyebrow">Product</div>
             <ul>
               <li>
-                <a href="#voice">Anora Voice</a>
+                <a href="#voice">Arlong Voice</a>
               </li>
               <li>
-                <a href="#dashboard">Anora Dashboard</a>
+                <a href="#dashboard">Arlong Dashboard</a>
               </li>
               <li>
-                <a href="#reserve">Anora Reserve</a>
+                <a href="#reserve">Arlong Reserve</a>
               </li>
               <li>
-                <a href="#tables">Anora Tables</a>
+                <a href="#tables">Arlong Tables</a>
               </li>
             </ul>
           </div>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         <div className="foot-bottom">
-          <span>© 2026 ANORA AI</span>
+          <span>© 2026 ARLONG AI</span>
           <span>FRONT OF HOUSE, OPERATED</span>
         </div>
       </div>

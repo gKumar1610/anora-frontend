@@ -10,7 +10,7 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 // committed scope; they exist here only as atmosphere behind the wordmark.
 // Top row, bottom row, and two bubbles flanking each side of the wordmark at
 // mid-height (just outside its actual text width) — so the space left/right
-// of "Anora AI" fills in, not just the far corners.
+// of "Arlong AI" fills in, not just the far corners.
 const BUBBLES: { label: string; top: number; left: number; size: 'sm' | 'md' | 'lg' }[] = [
   { label: 'Voice', top: 8, left: 8, size: 'lg' },
   { label: 'Dashboard', top: 14, left: 32, size: 'md' },
@@ -186,7 +186,7 @@ export default function Intro() {
       <div className="intro-inner" ref={innerRef}>
         <span className="intro-rule" ref={ruleRef} />
         <h1 className="intro-word" ref={headingRef}>
-          Anora AI
+          Arlong AI
         </h1>
         <p className="intro-tagline" ref={taglineRef}>
           Voice For Your Brand

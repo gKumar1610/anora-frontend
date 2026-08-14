@@ -1,6 +1,6 @@
-# Anora Landing
+# Arlong Landing
 
-The public marketing site for Anora AI — a front-of-house operations platform for
+The public marketing site for Arlong AI — a front-of-house operations platform for
 independent restaurants and cafés. React + TypeScript + Vite, no CSS framework;
 styling is hand-written in `src/styles.css`.
 

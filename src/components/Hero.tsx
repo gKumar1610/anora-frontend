@@ -52,7 +52,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero" id="top">
+    <section className="hero" id="hero">
       <div className="hero-grid">
         <div>
           <div className="eyebrow hero-eyebrow">Front-of-house operations</div>
@@ -73,7 +73,7 @@ export default function Hero() {
           </p>
           <div className="hero-ctas">
             <a className="cta cta-primary" href={DEMO_MAILTO}>
-              Book a demo call
+              Request a Live Call
             </a>
             <a className="cta-text" href="#how-it-works">
               See how a call flows ↓

@@ -10,7 +10,7 @@ export default function FinalCta() {
       </p>
       <div className="hero-ctas">
         <a className="cta cta-primary" href={DEMO_MAILTO}>
-          Book a demo call
+          Request a Live Call
         </a>
       </div>
     </section>

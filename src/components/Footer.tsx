@@ -51,7 +51,7 @@ export default function Footer() {
             <div className="eyebrow">Get in touch</div>
             <ul>
               <li>
-                <a href={DEMO_MAILTO}>Book a demo call</a>
+                <a href={DEMO_MAILTO}>Request a Live Call</a>
               </li>
               <li>
                 <a href={CONTACT_MAILTO}>General enquiries</a>

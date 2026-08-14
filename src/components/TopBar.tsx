@@ -20,10 +20,8 @@ export default function TopBar() {
       </nav>
 
       <a className="cta cta-primary" href={DEMO_MAILTO}>
-        <span className="long">Book a demo call</span>
-        <span className="short mono" style={{ display: 'none' }}>
-          Demo
-        </span>
+        <span className="long">Request a Live Call</span>
+        <span className="short mono">Live Call</span>
       </a>
     </div>
   );

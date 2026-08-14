@@ -1,4 +1,5 @@
 import TopBar from './components/TopBar';
+import Intro from './components/Intro';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
 import HowItWorks from './components/HowItWorks';
@@ -13,6 +14,7 @@ export default function App() {
     <>
       <TopBar />
       <main>
+        <Intro />
         <Hero />
         <Problem />
         <HowItWorks />

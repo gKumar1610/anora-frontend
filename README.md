@@ -4,6 +4,10 @@ The public marketing site for Anora AI — a front-of-house operations platform 
 independent restaurants and cafés. React + TypeScript + Vite, no CSS framework;
 styling is hand-written in `src/styles.css`.
 
+## Repository
+
+Live at [github.com/gKumar1610/anora-frontend](https://github.com/gKumar1610/anora-frontend).
+
 ## Run locally
 
 ```bash

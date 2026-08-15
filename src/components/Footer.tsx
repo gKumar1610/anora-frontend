@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="eyebrow">Product</div>
             <ul>
               <li>
-                <a href="#voice">Arlong Voice</a>
+                <a href="#voice">Nami Voice</a>
               </li>
               <li>
                 <a href="#dashboard">Arlong Dashboard</a>

@@ -41,7 +41,7 @@ export default function Differentiation() {
             </div>
             <div className="compare-step strong">
               <span className="mark">02</span>
-              <span>Arlong Voice always answers</span>
+              <span>Nami Voice always answers</span>
             </div>
             <div className="compare-step strong">
               <span className="mark">03</span>

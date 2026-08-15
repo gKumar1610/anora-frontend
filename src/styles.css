@@ -970,6 +970,11 @@ section {
   font-size: 15px;
   line-height: 1.7;
 }
+.module-tags {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
 .module-tag {
   font-family: var(--font-mono);
   font-size: 10.5px;
@@ -985,6 +990,16 @@ section {
   color: var(--ink);
   background: var(--paper);
   border-color: var(--paper);
+}
+.inline-tag {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 10px;
+  transform: translateY(-2px);
+}
+.module-tag.new {
+  color: var(--paper);
+  border-style: dashed;
 }
 
 /* ===== differentiation ===== */
@@ -1236,7 +1251,7 @@ footer {
   .module-row {
     grid-template-columns: auto 1fr;
   }
-  .module-tag {
+  .module-tags {
     grid-column: 2;
   }
   .foot-top {

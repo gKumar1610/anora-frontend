@@ -4,11 +4,10 @@ const MODULES = [
   {
     id: 'voice',
     idx: '01',
-    name: 'Arlong Voice',
+    name: 'Nami Voice',
     tagline: 'Answers the phone.',
     desc: "Answers every inbound call, books the table, and handles guest enquiries — hours, seating, policy — strictly from your venue's own profile. Escalates and hands off to staff when it should. Live today, taking real reservations.",
-    tag: 'LIVE',
-    live: true,
+    newTag: 'NEW',
   },
   {
     id: 'dashboard',
@@ -57,11 +56,18 @@ export default function Modules() {
             <div className="module-row" id={m.id} key={m.id}>
               <div className="module-idx">{m.idx}</div>
               <div className="module-body">
-                <h3>{m.name}</h3>
+                <h3>
+                  {m.name}
+                  {'newTag' in m && <span className="module-tag new inline-tag">{m.newTag}</span>}
+                </h3>
                 <div className="module-tagline">{m.tagline}</div>
                 <p className="desc">{m.desc}</p>
               </div>
-              <div className={`module-tag ${m.live ? 'live' : ''}`.trim()}>{m.tag}</div>
+              {'tag' in m && (
+                <div className="module-tags">
+                  <div className={`module-tag ${m.live ? 'live' : ''}`.trim()}>{m.tag}</div>
+                </div>
+              )}
             </div>
           ))}
         </Reveal>

@@ -3,7 +3,7 @@ import { DEMO_MAILTO } from '../constants';
 
 const TRANSCRIPT = [
   {
-    who: 'ARLONG VOICE',
+    who: 'NAMI VOICE',
     role: 'agent',
     text: 'Good evening, Lili Cantonese Kitchen — how can I help?',
   },
@@ -13,7 +13,7 @@ const TRANSCRIPT = [
     text: 'Hi, table for four this Saturday around eight?',
   },
   {
-    who: 'ARLONG VOICE',
+    who: 'NAMI VOICE',
     role: 'agent',
     text: 'Checking Saturday... 8:15pm is open. Shall I book that for you?',
   },
@@ -67,7 +67,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="lede">
-            Arlong Voice answers your restaurant's phone the way your best host would — every ring, every
+            Nami Voice answers your restaurant's phone the way your best host would — every ring, every
             service, including the ones you can't staff. It books the table, answers the guest's question,
             and hands off to your team the moment a person should take over.
           </p>
@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="call-head">
             <div className="call-head-left">
               <span className="live-dot" />
-              <span className="label">LIVE&nbsp;·&nbsp;ARLONG VOICE</span>
+              <span className="label">LIVE&nbsp;·&nbsp;NAMI VOICE</span>
             </div>
             <div className="waveform" aria-hidden="true">
               <span></span>

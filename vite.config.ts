@@ -17,5 +17,12 @@ export default defineConfig({
   server: {
     port: 5173,
     https,
+    // Vite only serves plain HTTPS (HTTP/1.1) when `proxy` is set — otherwise
+    // it upgrades to Node's http2.createSecureServer, which Safari can't
+    // reliably hold a connection to alongside the Vite HMR websocket over a
+    // self-signed cert (surfaces as "server unexpectedly dropped the
+    // connection"). This app has nothing to proxy, so the empty object here
+    // exists purely to select the HTTP/1.1 code path.
+    proxy: {},
   },
 });

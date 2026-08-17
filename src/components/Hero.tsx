@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DEMO_MAILTO } from '../constants';
+import LiveCallButton from './LiveCallButton';
 
 const TRANSCRIPT = [
   {
@@ -72,9 +72,7 @@ export default function Hero() {
             and hands off to your team the moment a person should take over.
           </p>
           <div className="hero-ctas">
-            <a className="cta cta-primary" href={DEMO_MAILTO}>
-              Request a Live Call
-            </a>
+            <LiveCallButton className="cta cta-primary">Request a Live Call</LiveCallButton>
             <a className="cta-text" href="#how-it-works">
               See how a call flows ↓
             </a>

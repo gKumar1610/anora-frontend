@@ -310,6 +310,14 @@ section {
   white-space: nowrap;
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 }
+button.cta {
+  appearance: none;
+  cursor: pointer;
+}
+button.cta:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
 .cta-primary {
   background: var(--paper);
   color: var(--ink);
@@ -1186,13 +1194,22 @@ footer {
   flex-direction: column;
   gap: 11px;
 }
-.foot-col a {
+.foot-col a,
+.foot-col button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
   text-decoration: none;
+  font-family: inherit;
   font-size: 14px;
   color: var(--paper-dim);
   transition: color 0.2s ease;
 }
-.foot-col a:hover {
+.foot-col a:hover,
+.foot-col button:hover {
   color: var(--paper);
 }
 .foot-bottom {
@@ -1268,4 +1285,175 @@ footer {
   .topbar .cta .short {
     display: inline;
   }
+  .live-call-panel {
+    padding: 32px 22px 26px;
+  }
+}
+
+/* ===== live call modal ===== */
+.live-call-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(12, 11, 9, 0.82);
+  backdrop-filter: blur(6px);
+  animation: liveCallFadeIn 0.25s ease forwards;
+}
+@keyframes liveCallFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.live-call-panel {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  box-shadow: 0 60px 120px -40px var(--shadow);
+  padding: 40px 32px 32px;
+  animation: liveCallPanelIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes liveCallPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.live-call-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--paper-dim);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.live-call-close:hover {
+  color: var(--paper);
+  border-color: var(--line-strong);
+}
+
+.live-call-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 0;
+  text-align: center;
+}
+.live-call-state .mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--paper-dim);
+}
+.live-call-error-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--paper);
+}
+.live-call-error-detail {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--paper-dim);
+  max-width: 34ch;
+}
+
+.live-call-room-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.live-call-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.live-call-head .mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+}
+.live-call-viz {
+  height: 96px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.live-call-hint {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--paper-faint);
+}
+
+.live-call-room[data-lk-theme='default'] {
+  --lk-bg: transparent;
+  --lk-bg2: var(--surface-2);
+  --lk-bg3: var(--line);
+  --lk-bg4: var(--line-strong);
+  --lk-bg5: var(--paper-dim);
+  --lk-fg: var(--paper);
+  --lk-fg2: var(--paper-dim);
+  --lk-fg3: var(--paper-dim);
+  --lk-fg4: var(--paper-faint);
+  --lk-fg5: var(--paper-faint);
+  --lk-border-color: var(--line);
+  --lk-accent-fg: var(--ink);
+  --lk-accent-bg: var(--paper);
+  --lk-accent2: var(--paper-dim);
+  --lk-accent3: var(--paper-dim);
+  --lk-accent4: var(--paper-faint);
+  --lk-danger: #d96a4f;
+  --lk-control-fg: var(--paper);
+  --lk-control-bg: var(--surface-2);
+  --lk-control-hover-bg: var(--line);
+  --lk-control-active-bg: var(--line-strong);
+  --lk-font-family: var(--font-body);
+  --lk-border-radius: var(--radius-s);
+  --lk-va-bar-bg: var(--line-strong);
+  --lk-va-bar-width: 4px;
+  --lk-va-bar-gap: 6px;
+  --lk-va-bar-border-radius: 2px;
+}
+.live-call-room .lk-audio-bar-visualizer {
+  height: 100%;
+}
+.live-call-room .lk-agent-control-bar,
+.live-call-room .lk-control-bar {
+  border-top: none;
+  padding: 0;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.live-call-room .lk-button,
+.live-call-room .lk-disconnect-button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: var(--radius-s);
 }

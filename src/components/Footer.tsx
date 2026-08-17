@@ -1,5 +1,6 @@
 import Brand from './Brand';
-import { CONTACT_MAILTO, DEMO_MAILTO } from '../constants';
+import LiveCallButton from './LiveCallButton';
+import { CONTACT_MAILTO } from '../constants';
 
 export default function Footer() {
   return (
@@ -51,7 +52,7 @@ export default function Footer() {
             <div className="eyebrow">Get in touch</div>
             <ul>
               <li>
-                <a href={DEMO_MAILTO}>Request a Live Call</a>
+                <LiveCallButton>Request a Live Call</LiveCallButton>
               </li>
               <li>
                 <a href={CONTACT_MAILTO}>General enquiries</a>

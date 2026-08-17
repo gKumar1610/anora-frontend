@@ -1,5 +1,6 @@
 import Brand from './Brand';
-import { DEMO_MAILTO, NAV_ITEMS } from '../constants';
+import LiveCallButton from './LiveCallButton';
+import { NAV_ITEMS } from '../constants';
 import { useActiveSection } from '../hooks';
 
 const NAV_IDS = NAV_ITEMS.map((item) => item.id);
@@ -19,10 +20,10 @@ export default function TopBar() {
         ))}
       </nav>
 
-      <a className="cta cta-primary" href={DEMO_MAILTO}>
+      <LiveCallButton className="cta cta-primary">
         <span className="long">Request a Live Call</span>
         <span className="short mono">Live Call</span>
-      </a>
+      </LiveCallButton>
     </div>
   );
 }

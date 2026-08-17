@@ -1,4 +1,4 @@
-import { DEMO_MAILTO } from '../constants';
+import LiveCallButton from './LiveCallButton';
 
 export default function FinalCta() {
   return (
@@ -9,9 +9,7 @@ export default function FinalCta() {
         Setup is measured in hours, not weeks, and nothing you already use has to be replaced to start.
       </p>
       <div className="hero-ctas">
-        <a className="cta cta-primary" href={DEMO_MAILTO}>
-          Request a Live Call
-        </a>
+        <LiveCallButton className="cta cta-primary">Request a Live Call</LiveCallButton>
       </div>
     </section>
   );

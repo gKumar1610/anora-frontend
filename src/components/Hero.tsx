@@ -5,7 +5,7 @@ const TRANSCRIPT = [
   {
     who: 'NAMI VOICE',
     role: 'agent',
-    text: 'Good evening, Lili Cantonese Kitchen — how can I help?',
+    text: "Good evening, Arlong's Kitchen — how can I help?",
   },
   {
     who: 'GUEST',
@@ -98,7 +98,7 @@ export default function Hero() {
               <span></span>
             </div>
           </div>
-          <div className="call-venue">Lili Cantonese Kitchen</div>
+          <div className="call-venue">Arlong's Kitchen</div>
           <div className="call-sub mono">Inbound call · caller +91 98••• ••214</div>
           <div className="transcript">
             {TRANSCRIPT.map((line, i) => (

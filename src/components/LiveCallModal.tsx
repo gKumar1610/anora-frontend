@@ -86,7 +86,7 @@ function LiveCallRoom() {
         <BarVisualizer state={state} trackRef={audioTrack} barCount={28} />
       </div>
       <p className="live-call-hint">
-        Speak naturally — you're talking to the same agent that answers Lili Cantonese Kitchen's phone.
+        Speak naturally — ask Nami anything about what Arlong AI does.
       </p>
       <VoiceAssistantControlBar controls={{ microphone: true, leave: true }} />
     </div>

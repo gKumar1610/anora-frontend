@@ -8,6 +8,7 @@ const MODULES = [
     tagline: 'Answers the phone.',
     desc: "Answers every inbound call, books the table, and handles guest enquiries — hours, seating, policy — strictly from your venue's own profile. Escalates and hands off to staff when it should. Live today, taking real reservations.",
     newTag: 'NEW',
+    href: 'https://namivoice.com/',
   },
   {
     id: 'dashboard',
@@ -52,24 +53,36 @@ export default function Modules() {
         </Reveal>
 
         <Reveal className="modules">
-          {MODULES.map((m) => (
-            <div className="module-row" id={m.id} key={m.id}>
-              <div className="module-idx">{m.idx}</div>
-              <div className="module-body">
-                <h3>
-                  {m.name}
-                  {'newTag' in m && <span className="module-tag new inline-tag">{m.newTag}</span>}
-                </h3>
-                <div className="module-tagline">{m.tagline}</div>
-                <p className="desc">{m.desc}</p>
-              </div>
-              {'tag' in m && (
-                <div className="module-tags">
-                  <div className={`module-tag ${m.live ? 'live' : ''}`.trim()}>{m.tag}</div>
+          {MODULES.map((m) => {
+            const Row = 'href' in m ? 'a' : 'div';
+            const rowProps =
+              'href' in m
+                ? { href: m.href, target: '_blank', rel: 'noopener noreferrer' }
+                : {};
+            return (
+              <Row
+                className={`module-row${'href' in m ? ' module-row-link' : ''}`}
+                id={m.id}
+                key={m.id}
+                {...rowProps}
+              >
+                <div className="module-idx">{m.idx}</div>
+                <div className="module-body">
+                  <h3>
+                    {m.name}
+                    {'newTag' in m && <span className="module-tag new inline-tag">{m.newTag}</span>}
+                  </h3>
+                  <div className="module-tagline">{m.tagline}</div>
+                  <p className="desc">{m.desc}</p>
                 </div>
-              )}
-            </div>
-          ))}
+                {'tag' in m && (
+                  <div className="module-tags">
+                    <div className={`module-tag ${m.live ? 'live' : ''}`.trim()}>{m.tag}</div>
+                  </div>
+                )}
+              </Row>
+            );
+          })}
         </Reveal>
       </div>
     </section>

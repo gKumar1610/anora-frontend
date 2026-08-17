@@ -3,7 +3,10 @@ export interface LiveCallCredentials {
   participant_token: string;
 }
 
-const API_BASE = (import.meta.env.VITE_LIVE_CALL_API ?? 'http://localhost:8000').replace(/\/$/, '');
+// Defaults to the backend on the same host that served this page (port 8000),
+// so this keeps working whether the page was opened via localhost or a LAN IP.
+const DEFAULT_API_BASE = `${window.location.protocol}//${window.location.hostname}:8000`;
+const API_BASE = (import.meta.env.VITE_LIVE_CALL_API ?? DEFAULT_API_BASE).replace(/\/$/, '');
 
 export async function requestLiveCallToken(): Promise<LiveCallCredentials> {
   let response: Response;

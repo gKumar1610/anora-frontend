@@ -1,0 +1,2 @@
+"""Restaurant voice agent application."""
+

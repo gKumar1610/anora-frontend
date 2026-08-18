@@ -388,11 +388,15 @@ async def start_inbound_session(ctx: Any, metadata: dict[str, Any]) -> None:
 
     is_browser_demo = metadata.get("source") == "browser-demo"
 
+    # ai_coustics noise cancellation is not authorized on this LiveKit Cloud
+    # project ("Unable to authorize model use"), which broke the Cartesia STT
+    # audio pipeline mid-call for every browser-demo session. Disabled until
+    # the QUAIL_VF_S enhancement model is enabled on the account.
     await _start_session(
         session=session,
         ctx=ctx,
         assistant=assistant,
-        use_agent_audio_enhancement=is_browser_demo,
+        use_agent_audio_enhancement=False,
     )
 
     if not is_browser_demo:
